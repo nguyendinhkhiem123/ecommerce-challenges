@@ -1,0 +1,75 @@
+{
+  "New Tsx": {
+    "prefix": ["~tsx", "!tsx"],
+    "body": [
+      "interface I${1:Component}Props {  }",
+      "",
+      "const ${1:Component}: React.FC<I${1:Component}Props> = (props) => {",
+      "",
+      "  return (",
+      "    <${2:div}>",
+      "    ",
+      "    </${2:div}>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:Component};"
+    ],
+    "description": "Create a new Component"
+  },
+
+  "Add TSX": {
+    "prefix": ["~atsx", "!atsx"],
+    "body": [
+      "const ${1:Component}: React.FC<{}> = (props) => {",
+      "",
+      "  return (",
+      "    <${2:div}>",
+      "    ",
+      "    </${2:div}>",
+      "  )",
+      "}"
+    ],
+    "description": "Add a new Component"
+  },
+  "Add icon": {
+    "prefix": ["~icon", "!icon", "~aicon", "!aicon"],
+    "body": [
+      "export const ${1:Component}Icon: React.FC<IIconSVGProps> = props => (",
+      "  ${2}",
+      ")"
+    ],
+    "description": "Add icon"
+  },
+  "Add Slices": {
+    "prefix": ["~slice", "!slice"],
+    "body": [
+      "import { createSlice, PayloadAction } from \"@reduxjs/toolkit\";",
+      "",
+      "interface I${1}State {",
+      "  ",
+      "};",
+      "",
+      "const initialState: I${1}State = {",
+      "  ",
+      "};",
+      "",
+      "export const ${2}Slice = createSlice({",
+      "  name: \"${2}\",",
+      "  initialState,",
+      "  reducers: {",
+      "    ",
+      "  },",
+      "});",
+      "",
+      "// Actions",
+      "export const {} = ${2}Slice.actions;",
+      "",
+      "export default ${2}Slice.reducer;"
+    ]
+  },
+  "Add reducer": {
+    "prefix": ["~areducer", "!areducer"],
+    "body": ["${1}: (state, action: PayloadAction<${2}>) => {", "  ${3}", "},"]
+  }
+}
